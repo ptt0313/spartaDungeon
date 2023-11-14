@@ -9,9 +9,26 @@ internal class Program
     static void Main(string[] args)
     {
         GameDataSetting();
+        PrintStartLogo();
         DisplayGameIntro();
+        
     }
 
+    private static void PrintStartLogo()
+    {
+    Console.WriteLine("   ▄████████    ▄███████▄    ▄████████    ▄████████     ███        ▄████████ ████████▄  ███    █▄  ███▄▄▄▄      ▄██████▄     ▄████████  ▄██████▄  ███▄▄▄▄   ");
+    Console.WriteLine("  ███    ███   ███    ███   ███    ███   ███    ███ ▀█████████▄   ███    ███ ███   ▀███ ███    ███ ███▀▀▀██▄   ███    ███   ███    ███ ███    ███ ███▀▀▀██▄ ");
+    Console.WriteLine("  ███    █▀    ███    ███   ███    ███   ███    ███    ▀███▀▀██   ███    ███ ███    ███ ███    ███ ███   ███   ███    █▀    ███    █▀  ███    ███ ███   ███ ");
+    Console.WriteLine("  ███          ███    ███   ███    ███  ▄███▄▄▄▄██▀     ███   ▀   ███    ███ ███    ███ ███    ███ ███   ███  ▄███         ▄███▄▄▄     ███    ███ ███   ███ ");
+    Console.WriteLine(" ▀███████████ ▀█████████▀  ▀███████████ ▀▀███▀▀▀▀▀       ███     ▀███████████ ███    ███ ███    ███ ███   ███ ▀▀███ ████▄  ▀▀███▀▀▀     ███    ███ ███   ███ ");
+    Console.WriteLine("           ███   ███          ███    ███ ▀███████████     ███       ███    ███ ███    ███ ███    ███ ███   ███   ███    ███   ███    █▄  ███    ███ ███   ███ ");
+    Console.WriteLine("      ▄█    ███   ███          ███    ███   ███    ███     ███       ███    ███ ███   ▄███ ███    ███ ███   ███   ███    ███   ███    ███ ███    ███ ███   ███ ");
+    Console.WriteLine("     ▄████████▀   ▄████▀        ███    █▀    ███    ███    ▄████▀     ███    █▀  ████████▀  ████████▀   ▀█   █▀    ████████▀    ██████████  ▀██████▀   ▀█   █▀  ");
+    Console.WriteLine("                               ███    ███                                                                                                         ");
+        Console.ReadKey();
+
+
+    }
     static void GameDataSetting()
     {
         // 캐릭터 정보 세팅
@@ -58,20 +75,20 @@ internal class Program
 
     static void DisplayMyInfo()
     {
-        Console.Clear();
+            Console.Clear();
 
-        Console.WriteLine("상태보기");
-        Console.WriteLine("캐릭터의 정보를 표시합니다.");
-        Console.WriteLine();
-        Console.WriteLine($"Lv.{player.Level}");
-        Console.WriteLine($"{player.Name}({player.Job})");
-        Console.WriteLine($"공격력 :{player.Atk}");
-        Console.WriteLine($"방어력 : {player.Def}");
-        Console.WriteLine($"체력 : {player.Hp}");
-        Console.WriteLine($"Gold : {player.Gold} G");
-        Console.WriteLine();
-        Console.WriteLine("0. 나가기");
-
+            Console.WriteLine("상태보기");
+            Console.WriteLine("캐릭터의 정보를 표시합니다.");
+            Console.WriteLine();
+            Console.WriteLine($"Lv.{player.Level}");
+            Console.WriteLine($"{player.Name}({player.Job})");
+            Console.WriteLine($"공격력 :{player.Atk} (+{player.Atk-10})");
+            Console.WriteLine($"방어력 : {player.Def} (+{player.Def-5})");
+            Console.WriteLine($"체력 : {player.Hp} (+{player.Hp-100})");
+            Console.WriteLine($"Gold : {player.Gold} G");
+            Console.WriteLine();
+            Console.WriteLine("0. 나가기");
+        
         int input = CheckValidInput(0, 0);
         switch (input)
         {
@@ -218,11 +235,14 @@ public class Character
         Def = 5;
         Hp = 100;
 
+
         foreach (Item item in EquippedItems)
         {
             if (item.Type == "공격력")
             {
                 Atk += item.Value;
+
+                
             }
             else if (item.Type == "방어력")
             {
