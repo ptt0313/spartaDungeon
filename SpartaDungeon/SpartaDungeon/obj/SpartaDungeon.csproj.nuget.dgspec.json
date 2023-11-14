@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\workspace\\SpartaDungeon\\SpartaDungeon\\SpartaDungeon.csproj": {}
+    "C:\\Users\\82109\\Documents\\GitHub\\spartaDungeon\\SpartaDungeon\\SpartaDungeon\\SpartaDungeon.csproj": {}
   },
   "projects": {
-    "D:\\workspace\\SpartaDungeon\\SpartaDungeon\\SpartaDungeon.csproj": {
+    "C:\\Users\\82109\\Documents\\GitHub\\spartaDungeon\\SpartaDungeon\\SpartaDungeon\\SpartaDungeon.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\workspace\\SpartaDungeon\\SpartaDungeon\\SpartaDungeon.csproj",
+        "projectUniqueName": "C:\\Users\\82109\\Documents\\GitHub\\spartaDungeon\\SpartaDungeon\\SpartaDungeon\\SpartaDungeon.csproj",
         "projectName": "SpartaDungeon",
-        "projectPath": "D:\\workspace\\SpartaDungeon\\SpartaDungeon\\SpartaDungeon.csproj",
+        "projectPath": "C:\\Users\\82109\\Documents\\GitHub\\spartaDungeon\\SpartaDungeon\\SpartaDungeon\\SpartaDungeon.csproj",
         "packagesPath": "C:\\Users\\82109\\.nuget\\packages\\",
-        "outputPath": "D:\\workspace\\SpartaDungeon\\SpartaDungeon\\obj\\",
+        "outputPath": "C:\\Users\\82109\\Documents\\GitHub\\spartaDungeon\\SpartaDungeon\\SpartaDungeon\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\82109\\AppData\\Roaming\\NuGet\\NuGet.Config",
